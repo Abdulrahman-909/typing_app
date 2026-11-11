@@ -1,0 +1,17 @@
+{
+  "en": {
+    "easy": "the calm sun is up we can learn a new skill each day take your time and find a steady pace a small step can lead to a great change keep your hands soft and your eyes on the words",
+    "medium": "practice brings confidence when you return with patience every morning a thoughtful learner notices small improvements and builds stronger habits through careful attention",
+    "hard": "consistent deliberate practice strengthens coordination concentration and adaptability meaningful improvements require curiosity persistence experimentation and thoughtful reflection"
+  },
+  "fa": {
+    "easy": "من هر روز درس می خوانم ما با هم کار می کنیم خانه ما باغ دارد هوا خوب است کتاب من روی میز است امروز یک روز نو است ما زبان دری را دوست داریم",
+    "medium": "تمرین روزانه به ما کمک می کند تا مهارت نو بیاموزیم با آرامش و دقت می توانیم بهتر بنویسیم هر شاگرد با کوشش و حوصله پیشرفت می کند",
+    "hard": "آموزش مهارت های تازه نیازمند پشتکار برنامه ریزی و تمرکز است همکاری میان آموزگار و شاگرد زمینه پیشرفت و یادگیری بهتر را فراهم می سازد"
+  },
+  "ps": {
+    "easy": "زه هره ورځ کتاب لولم موږ په کور کې یو هوا ښه ده لمر روښانه دی دا زما کتاب دی زموږ باغ ښکلی دی زه خپله ژبه خوښوم موږ یو ځای کار کوو",
+    "medium": "هره ورځ تمرین زموږ مهارت پیاوړی کوي په دقت او حوصله سره موږ ښه لیکل زده کوو زده کړه د ژوند یوه مهمه برخه ده",
+    "hard": "د نویو مهارتونو زده کړه دوامدار تمرین او پاملرنه غواړي د ښوونکي او زده کوونکي همکاري د پرمختګ لپاره مناسبه زمینه برابروي"
+  }
+}

@@ -1,0 +1,6 @@
+-r base.txt
+waitress==3.0.2
+platformdirs>=4,<5
+filelock>=3,<5
+pywebview>=6,<7
+PyInstaller>=6,<7

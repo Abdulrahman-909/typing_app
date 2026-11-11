@@ -1,0 +1,12 @@
+# Decisions
+- Python 3.12 is the primary target; CI also exercises 3.13. Django 5.2 LTS is pinned to the patch available in this environment (5.2.19). Official release notes support Python 3.12: https://docs.djangoproject.com/en/5.2/releases/5.2/ . Recheck patches before deployment.
+- Templates and vanilla ES modules preserve a small, understandable frontend and offline operation.
+- PostgreSQL configuration is provided; the locally verified database is SQLite.
+- Waitress is used only for the local desktop HTTP process; Django development server is used for development previews. ASGI/Daphne is required for multiplayer web hosting.
+- The desktop server uses a per-launch token gate and a one-use random cookie-bootstrap URL. It is not a defense against malware running as the same OS user. Admin is excluded on desktop.
+- Public leaderboard conditions are plain generated words; punctuation/numbers and custom/lesson/daily exercises are excluded from ranking.
+- Fixed logical positions are used for scoring: an early space is an incorrect character, not automatic word skipping. Backspace can cross word boundaries. This is a deliberate simplification, documented to avoid ambiguous scoring.
+- UI language is English. Passage language is independent. Dari and Pashto content and illustrative keyboard mappings require review; no verified Windows-layout claim is made.
+- MIT is assumed for original project code and sample content; Noto font licensing is kept separately. Change the license before publishing if desired.
+- No GitHub repository was created or published because no destination was supplied. Source is delivered as a downloadable archive.
+- Desktop synchronization is a bounded append-only import, with explicit token creation and immutable IDs. Imported data is kept separate from ranked results. Settings synchronization and deletion tombstones remain outside this release.

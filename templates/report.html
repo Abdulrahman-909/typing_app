@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<section class="form-card"><h1>Report passage</h1><p>{{ passage.title }}</p><form method="post">{% csrf_token %}<label for="reason">What needs attention?</label><textarea id="reason" name="reason" maxlength="500" required></textarea><button class="button">Send report</button></form></section>{% endblock %}

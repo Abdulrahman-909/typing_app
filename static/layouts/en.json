@@ -1,0 +1,179 @@
+{
+  "name": "US QWERTY",
+  "review_status": "Basic unshifted mapping only",
+  "source": "Project-authored illustrative layout; see docs/KEYBOARD_LAYOUTS.md",
+  "rows": [
+    [
+      "q",
+      "w",
+      "e",
+      "r",
+      "t",
+      "y",
+      "u",
+      "i",
+      "o",
+      "p"
+    ],
+    [
+      "a",
+      "s",
+      "d",
+      "f",
+      "g",
+      "h",
+      "j",
+      "k",
+      "l"
+    ],
+    [
+      "z",
+      "x",
+      "c",
+      "v",
+      "b",
+      "n",
+      "m"
+    ],
+    [
+      " "
+    ]
+  ],
+  "keys": [
+    {
+      "char": "q",
+      "label": "q",
+      "finger": "Left little"
+    },
+    {
+      "char": "w",
+      "label": "w",
+      "finger": "Left ring"
+    },
+    {
+      "char": "e",
+      "label": "e",
+      "finger": "Left middle"
+    },
+    {
+      "char": "r",
+      "label": "r",
+      "finger": "Left index"
+    },
+    {
+      "char": "t",
+      "label": "t",
+      "finger": "Left index"
+    },
+    {
+      "char": "y",
+      "label": "y",
+      "finger": "Right index"
+    },
+    {
+      "char": "u",
+      "label": "u",
+      "finger": "Right index"
+    },
+    {
+      "char": "i",
+      "label": "i",
+      "finger": "Right middle"
+    },
+    {
+      "char": "o",
+      "label": "o",
+      "finger": "Right ring"
+    },
+    {
+      "char": "p",
+      "label": "p",
+      "finger": "Right little"
+    },
+    {
+      "char": "a",
+      "label": "a",
+      "finger": "Left little"
+    },
+    {
+      "char": "s",
+      "label": "s",
+      "finger": "Left ring"
+    },
+    {
+      "char": "d",
+      "label": "d",
+      "finger": "Left middle"
+    },
+    {
+      "char": "f",
+      "label": "f",
+      "finger": "Left index"
+    },
+    {
+      "char": "g",
+      "label": "g",
+      "finger": "Left index"
+    },
+    {
+      "char": "h",
+      "label": "h",
+      "finger": "Right index"
+    },
+    {
+      "char": "j",
+      "label": "j",
+      "finger": "Right index"
+    },
+    {
+      "char": "k",
+      "label": "k",
+      "finger": "Right middle"
+    },
+    {
+      "char": "l",
+      "label": "l",
+      "finger": "Right ring"
+    },
+    {
+      "char": "z",
+      "label": "z",
+      "finger": "Left little"
+    },
+    {
+      "char": "x",
+      "label": "x",
+      "finger": "Left ring"
+    },
+    {
+      "char": "c",
+      "label": "c",
+      "finger": "Left middle"
+    },
+    {
+      "char": "v",
+      "label": "v",
+      "finger": "Left index"
+    },
+    {
+      "char": "b",
+      "label": "b",
+      "finger": "Left index"
+    },
+    {
+      "char": "n",
+      "label": "n",
+      "finger": "Right index"
+    },
+    {
+      "char": "m",
+      "label": "m",
+      "finger": "Right index"
+    },
+    {
+      "char": " ",
+      "label": "Space",
+      "finger": "Thumb"
+    }
+  ]
+}

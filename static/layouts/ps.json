@@ -1,0 +1,209 @@
+{
+  "name": "Pashto — illustrative, not verified",
+  "review_status": "Needs native keyboard verification; do not use as authoritative",
+  "source": "Project-authored illustrative layout; see docs/KEYBOARD_LAYOUTS.md",
+  "rows": [
+    [
+      "ض",
+      "ص",
+      "ث",
+      "ق",
+      "ف",
+      "غ",
+      "ع",
+      "ه",
+      "خ",
+      "ح",
+      "ج",
+      "چ"
+    ],
+    [
+      "ش",
+      "س",
+      "ی",
+      "ب",
+      "ل",
+      "ا",
+      "ت",
+      "ن",
+      "م",
+      "ک",
+      "ګ"
+    ],
+    [
+      "ظ",
+      "ط",
+      "ز",
+      "ر",
+      "ذ",
+      "د",
+      "پ",
+      "و"
+    ],
+    [
+      " "
+    ]
+  ],
+  "keys": [
+    {
+      "char": "ض",
+      "label": "ض",
+      "finger": "Left little"
+    },
+    {
+      "char": "ص",
+      "label": "ص",
+      "finger": "Left ring"
+    },
+    {
+      "char": "ث",
+      "label": "ث",
+      "finger": "Left middle"
+    },
+    {
+      "char": "ق",
+      "label": "ق",
+      "finger": "Left index"
+    },
+    {
+      "char": "ف",
+      "label": "ف",
+      "finger": "Left index"
+    },
+    {
+      "char": "غ",
+      "label": "غ",
+      "finger": "Right index"
+    },
+    {
+      "char": "ع",
+      "label": "ع",
+      "finger": "Right index"
+    },
+    {
+      "char": "ه",
+      "label": "ه",
+      "finger": "Right middle"
+    },
+    {
+      "char": "خ",
+      "label": "خ",
+      "finger": "Right ring"
+    },
+    {
+      "char": "ح",
+      "label": "ح",
+      "finger": "Right little"
+    },
+    {
+      "char": "ج",
+      "label": "ج",
+      "finger": "Right little"
+    },
+    {
+      "char": "چ",
+      "label": "چ",
+      "finger": "Right little"
+    },
+    {
+      "char": "ش",
+      "label": "ش",
+      "finger": "Left little"
+    },
+    {
+      "char": "س",
+      "label": "س",
+      "finger": "Left ring"
+    },
+    {
+      "char": "ی",
+      "label": "ی",
+      "finger": "Left middle"
+    },
+    {
+      "char": "ب",
+      "label": "ب",
+      "finger": "Left index"
+    },
+    {
+      "char": "ل",
+      "label": "ل",
+      "finger": "Left index"
+    },
+    {
+      "char": "ا",
+      "label": "ا",
+      "finger": "Right index"
+    },
+    {
+      "char": "ت",
+      "label": "ت",
+      "finger": "Right index"
+    },
+    {
+      "char": "ن",
+      "label": "ن",
+      "finger": "Right middle"
+    },
+    {
+      "char": "م",
+      "label": "م",
+      "finger": "Right ring"
+    },
+    {
+      "char": "ک",
+      "label": "ک",
+      "finger": "Right little"
+    },
+    {
+      "char": "ګ",
+      "label": "ګ",
+      "finger": "Right little"
+    },
+    {
+      "char": "ظ",
+      "label": "ظ",
+      "finger": "Left little"
+    },
+    {
+      "char": "ط",
+      "label": "ط",
+      "finger": "Left ring"
+    },
+    {
+      "char": "ز",
+      "label": "ز",
+      "finger": "Left middle"
+    },
+    {
+      "char": "ر",
+      "label": "ر",
+      "finger": "Left index"
+    },
+    {
+      "char": "ذ",
+      "label": "ذ",
+      "finger": "Left index"
+    },
+    {
+      "char": "د",
+      "label": "د",
+      "finger": "Right index"
+    },
+    {
+      "char": "پ",
+      "label": "پ",
+      "finger": "Right index"
+    },
+    {
+      "char": "و",
+      "label": "و",
+      "finger": "Right middle"
+    },
+    {
+      "char": " ",
+      "label": "Space",
+      "finger": "Thumb"
+    }
+  ]
+}

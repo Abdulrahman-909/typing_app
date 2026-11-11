@@ -1,0 +1,1 @@
+{"private":true,"type":"module","scripts":{"dev":"python scripts/preview.py","test":"node --test tests/scoring.test.js"}}

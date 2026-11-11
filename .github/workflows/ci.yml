@@ -1,0 +1,67 @@
+name: Checks
+on: [push, pull_request]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: pip install -r requirements/dev.txt
+      - run: ruff check . && ruff format --check .
+      - run: python manage.py check && python manage.py makemigrations --check --dry-run
+      - run: pytest --cov=typing_engine --cov=apps --cov=desktop --cov-report=term-missing
+      - run: node --test tests/scoring.test.js
+      - run: python manage.py migrate && python manage.py seed_demo_data && python manage.py collectstatic --noinput
+      - run: pip install playwright && python -m playwright install --with-deps chromium
+      - run: |
+          python manage.py runserver 127.0.0.1:8000 --noreload &
+          for i in $(seq 1 30); do curl -fs http://127.0.0.1:8000/health/ && break || sleep 1; done
+          python tests/browser_e2e.py
+      - run: python -m desktop --smoke
+        env:
+          TYPEATLAS_DATA_DIR: ${{ runner.temp }}/desktop-smoke
+  postgres:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: typeatlas
+          POSTGRES_PASSWORD: test-only-password
+          POSTGRES_DB: typeatlas
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      DATABASE_URL: postgres://typeatlas:test-only-password@localhost:5432/typeatlas
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements/dev.txt 'psycopg[binary]>=3.2,<4'
+      - run: pytest
+  windows-build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: ./scripts/build_windows.ps1
+      - run: ./dist/TypeAtlas/TypeAtlas.exe --smoke
+        env:
+          TYPEATLAS_DATA_DIR: ${{ runner.temp }}/typeatlas-smoke
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-desktop
+          path: dist/TypeAtlas/

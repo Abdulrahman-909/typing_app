@@ -1,0 +1,29 @@
+services:
+  web:
+    build: .
+    env_file: .env
+    environment:
+      DJANGO_SETTINGS_MODULE: config.settings.prod
+      DATABASE_URL: postgres://typeatlas:${POSTGRES_PASSWORD}@db:5432/typeatlas
+      REDIS_URL: redis://redis:6379/0
+    ports: ["127.0.0.1:8000:8000"]
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: typeatlas
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+      POSTGRES_DB: typeatlas
+    volumes: ["postgres-data:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U typeatlas"]
+      interval: 5s
+      retries: 10
+  redis:
+    image: redis:7-alpine
+volumes:
+  postgres-data:

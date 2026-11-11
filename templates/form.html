@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<section class="form-card"><p class="eyebrow">YOUR PRACTICE, YOUR PACE</p><h1>{{ heading }}</h1><p>{{ subtitle }}</p><form method="post">{% csrf_token %}{{ form.as_p }}<button class="button" type="submit">{{ button|default:'Continue' }} ↗</button></form></section>{% endblock %}
